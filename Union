@@ -1,0 +1,9 @@
+SELECT snum AS id, name, city, 'Salesperson' AS type  
+FROM salespeople  
+WHERE city = 'London'  
+
+UNION  
+
+SELECT cnum AS id, name, city, 'Customer' AS type  
+FROM customers  
+WHERE city = 'London';
