@@ -1,0 +1,7 @@
+SELECT *  
+FROM salespeople  
+WHERE city <> ALL (  
+    SELECT city  
+    FROM customers  
+    WHERE salespeople.snum = customers.snum  
+);
