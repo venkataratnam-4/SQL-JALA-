@@ -1,0 +1,3 @@
+SELECT min(cname)
+FROM cust
+WHERE cname like ‘G%’;
