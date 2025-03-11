@@ -1,0 +1,7 @@
+SELECT cnum, name, city, rating  
+FROM customers  
+WHERE rating > ANY (  
+    SELECT rating  
+    FROM customers  
+    WHERE city = 'Rome'  
+);
