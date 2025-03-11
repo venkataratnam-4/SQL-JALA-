@@ -1,0 +1,9 @@
+SELECT c1.*  
+FROM customers c1  
+WHERE EXISTS (  
+    SELECT 1  
+    FROM customers c2  
+    JOIN orders o ON c2.cnum = o.cnum  
+    WHERE c2.snum = c1.snum  
+    AND c2.cnum <> c1.cnum  
+);
