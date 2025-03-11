@@ -1,0 +1,7 @@
+SELECT s.snum, s.name, s.city,  
+       CASE  
+           WHEN c.cnum IS NOT NULL THEN 'Has customers in city'  
+           ELSE 'No customers in city'  
+       END AS customer_status  
+FROM salespeople s  
+LEFT JOIN customers c ON s.city = c.city;
