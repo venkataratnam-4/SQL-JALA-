@@ -1,0 +1,9 @@
+SELECT name, city, rating, 'High Rating' AS rating_category  
+FROM customers  
+WHERE rating >= 200  
+
+UNION  
+
+SELECT name, city, rating, 'Low Rating' AS rating_category  
+FROM customers  
+WHERE rating < 200;
