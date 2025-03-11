@@ -1,0 +1,4 @@
+SELECT odate, snum, max(amt)
+FROM orders
+group by odate, snum
+order by odate,snum;
