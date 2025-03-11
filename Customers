@@ -1,0 +1,4 @@
+SELECT cname
+FROM cust
+WHERE cname like ‘A%’ or
+            cname like ‘B%’;
