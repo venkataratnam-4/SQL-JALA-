@@ -1,0 +1,9 @@
+SELECT s.snum,  
+       CONCAT(s.name, ' - ',  
+           CASE  
+               WHEN c.cnum IS NOT NULL THEN 'Has customers in city'  
+               ELSE 'No customers in city'  
+           END) AS salesperson_status,  
+       s.city  
+FROM salespeople s  
+LEFT JOIN customers c ON s.city = c.city;
