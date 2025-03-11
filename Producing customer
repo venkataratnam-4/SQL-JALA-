@@ -1,0 +1,5 @@
+SELECT c.cname, a.onum, b.onum
+FROM orders a, orders b, cust c
+WHERE a.cnum = b.cnum and 
+          a.onum > b.onum and
+                      c.cnum = a.cnum;
