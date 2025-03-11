@@ -1,0 +1,4 @@
+SELECT DISTINCT customers.*  
+FROM customers  
+JOIN orders ON customers.cnum = orders.cnum  
+WHERE orders.odate = '2024-10-03';  -- Change the date format as per your database
