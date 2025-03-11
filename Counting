@@ -1,0 +1,5 @@
+SELECT salespeople.snum, salespeople.name  
+FROM salespeople  
+JOIN customers ON salespeople.snum = customers.snum  
+GROUP BY salespeople.snum, salespeople.name  
+HAVING COUNT(customers.cnum) > 1;
