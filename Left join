@@ -1,0 +1,5 @@
+SELECT DISTINCT s.snum, s.name, s.city  
+FROM salespeople s  
+JOIN customers c ON s.city = c.city  
+LEFT JOIN customers c2 ON s.snum = c2.snum AND c.cnum = c2.cnum  
+WHERE c2.cnum IS NULL;
