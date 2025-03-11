@@ -1,0 +1,5 @@
+SELECT s.snum, s.name AS salesperson_name, s.city AS salesperson_city,  
+       c.cnum, c.name AS customer_name, c.city AS customer_city  
+FROM salespeople s  
+FULL OUTER JOIN customers c  
+ON s.snum = c.snum;
