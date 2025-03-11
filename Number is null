@@ -1,0 +1,6 @@
+SELECT s.snum, s.name, s.city  
+FROM salespeople s  
+LEFT JOIN customers c  
+    ON s.snum = c.snum AND c.city = 'London'  
+WHERE s.city = 'London'  
+AND c.snum IS NULL;
