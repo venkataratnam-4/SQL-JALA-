@@ -1,0 +1,4 @@
+SELECT 'For ' || to_char(odate,'dd/mm/yy') || ' there are '|| 
+count(*) || ' Orders'
+FROM orders
+group by odate;
