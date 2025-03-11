@@ -1,0 +1,7 @@
+SELECT *  
+FROM customers  
+WHERE rating >= ANY (  
+    SELECT rating  
+    FROM customers  
+    WHERE name = 'Seeres'  
+);
