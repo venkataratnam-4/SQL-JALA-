@@ -1,0 +1,4 @@
+SELECT orders.snum, SUM(orders.amt) AS total_sales  
+FROM orders  
+GROUP BY orders.snum  
+HAVING SUM(orders.amt) > (SELECT MAX(amt) FROM orders);
