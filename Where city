@@ -1,0 +1,7 @@
+SELECT *  
+FROM customers  
+WHERE rating > ALL (  
+    SELECT rating  
+    FROM customers  
+    WHERE city = 'Paris'  
+);
