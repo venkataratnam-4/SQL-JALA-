@@ -1,0 +1,6 @@
+SELECT s.snum, s.name, o_high.odate AS highest_order_date, o_low.odate AS lowest_order_date  
+FROM salespeople s  
+LEFT JOIN orders o_high ON s.snum = o_high.snum  
+    AND o_high.amt = (SELECT MAX(amt) FROM orders WHERE snum = s.snum)  
+LEFT JOIN orders o_low ON s.snum = o_low.snum  
+    AND o_low.amt = (SELECT MIN(amt) FROM orders WHERE snum = s.snum);
