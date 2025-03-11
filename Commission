@@ -1,0 +1,4 @@
+SELECT sname, city
+FROM salepeople
+WHERE comm > 0.10 and
+           city = ‘London’;
