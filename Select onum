@@ -1,0 +1,15 @@
+SELECT snum AS id  
+FROM salespeople  
+WHERE city = 'San Jose'  
+
+UNION  
+
+SELECT cnum AS id  
+FROM customers  
+WHERE city = 'San Jose'  
+
+UNION ALL  
+
+SELECT onum AS id  
+FROM orders  
+WHERE odate = '2025-10-03';
