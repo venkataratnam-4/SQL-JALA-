@@ -1,0 +1,4 @@
+SELECT odate, amt, snum, cnum
+FROM orders
+WHERE amt = (select max(amt) 
+from orders)
