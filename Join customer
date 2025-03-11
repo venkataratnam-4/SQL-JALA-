@@ -1,0 +1,4 @@
+SELECT orders.onum, orders.cnum, orders.snum AS credited_snum, customers.snum AS actual_snum  
+FROM orders  
+JOIN customers ON orders.cnum = customers.cnum  
+WHERE orders.snum <> customers.snum;
