@@ -1,0 +1,4 @@
+SELECT DISTINCT customers.name, customers.rating  
+FROM customers  
+JOIN orders ON customers.cnum = orders.cnum  
+WHERE orders.amt > (SELECT AVG(amt) FROM orders);
