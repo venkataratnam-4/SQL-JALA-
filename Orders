@@ -1,0 +1,4 @@
+SELECT orders.*  
+FROM orders  
+JOIN customers ON orders.cnum = customers.cnum  
+WHERE customers.name = 'Cisnerous';
