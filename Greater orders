@@ -1,0 +1,5 @@
+SELECT * 
+FROM orders
+WHERE amt > ( SELECT avg(amt) 
+                        FROM orders
+                                    WHERE odate = '03-OCT-94');
