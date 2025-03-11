@@ -1,0 +1,4 @@
+SELECT DISTINCT s.snum, s.name, s.city  
+FROM salespeople s  
+JOIN customers c ON s.snum = c.snum  
+WHERE s.city = 'London' AND c.city = 'London';
