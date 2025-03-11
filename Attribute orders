@@ -1,0 +1,5 @@
+SELECT snum, cnum 
+FROM orders
+WHERE cnum in (SELECT cnum 
+  FROM cust
+                          WHERE city = 'London');
