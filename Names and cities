@@ -1,0 +1,6 @@
+SELECT cname, city
+FROM cust
+WHERE rating = (select rating
+            		        from cust
+              where cname = 'Hoffman')
+and cname != 'Hoffman';
