@@ -1,0 +1,4 @@
+SELECT odate, snum, max(amt orders
+WHERE amt > 3000
+group by odate, snum
+order by odate,snum;
