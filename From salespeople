@@ -1,0 +1,8 @@
+SELECT s.snum, s.name, s.city, s.commission  
+FROM salespeople s  
+WHERE EXISTS (  
+    SELECT 1  
+    FROM customers c  
+    WHERE c.snum = s.snum  
+    AND c.rating = 300  
+);
