@@ -1,0 +1,8 @@
+SELECT cname from cust
+ WHERE snum in (select snum from cust
+                group by snum
+                having count(snum) > 1);
+
+SELECT distinct a.cname
+FROM cust a ,cust b
+WHERE a.snum = b.snum and a.rowid != b.rowid;
