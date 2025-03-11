@@ -1,0 +1,7 @@
+SELECT cnum, name, city  
+FROM customers  
+WHERE EXISTS (  
+    SELECT 1  
+    FROM customers  
+    WHERE city = 'San Jose'  
+);
