@@ -1,0 +1,4 @@
+SELECT DISTINCT s.snum, s.name, s.city, s.commission  
+FROM salespeople s  
+JOIN customers c ON s.snum = c.snum  
+WHERE c.rating = 300;
