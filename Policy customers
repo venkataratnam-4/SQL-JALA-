@@ -1,0 +1,6 @@
+SELECT cname, sname
+FROM salespeople, cust
+WHERE sname in  ( select sname 
+     from salespeople
+                                         where rownum <= 3)
+order by cname;
