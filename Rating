@@ -1,0 +1,3 @@
+SELECTcname 
+FROM cust
+WHERE rating = 100;
