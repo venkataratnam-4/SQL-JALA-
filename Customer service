@@ -1,0 +1,4 @@
+SELECT cname, sname, comm
+FROM cust, salespeople
+WHERE comm > 0.12 and
+           cust.snum = salespeople.snum;
