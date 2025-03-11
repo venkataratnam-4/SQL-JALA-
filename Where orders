@@ -1,0 +1,8 @@
+SELECT orders.*  
+FROM orders  
+JOIN (  
+    SELECT cnum, AVG(amt) AS avg_amt  
+    FROM orders  
+    GROUP BY cnum  
+) AS customer_avg ON orders.cnum = customer_avg.cnum  
+WHERE orders.amt > customer_avg.avg_amt;
