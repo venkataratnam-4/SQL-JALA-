@@ -1,0 +1,15 @@
+SELECT s.name, s.snum AS num  
+FROM salespeople s  
+
+UNION  
+
+SELECT c.name, c.cnum AS num  
+FROM customers c  
+WHERE c.cnum IN (  
+    SELECT o.cnum  
+    FROM orders o  
+    GROUP BY o.cnum  
+    HAVING COUNT(o.onum) > 1  
+)  
+
+ORDER BY name;
