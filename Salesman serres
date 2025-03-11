@@ -1,0 +1,7 @@
+SELECT cname
+FROM cust
+WHERE city = ( select city 
+	      		     from cust, salespeople
+           where cust.snum = salespeople.snum and                  sname = 'Serres');
+
+Select cname 
