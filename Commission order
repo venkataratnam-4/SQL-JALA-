@@ -1,0 +1,3 @@
+SELECT onum, snum, amt, amt * 0.12
+FROM orders
+order by snum;
