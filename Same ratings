@@ -1,0 +1,5 @@
+SELECT a.cname, b.cname,a.rating
+FROM cust a, cust b
+WHERE a.rating = b.rating and
+          a.cnum != b.cnum and
+  	                a.cnum < b.cnum;
