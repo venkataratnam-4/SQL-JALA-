@@ -1,0 +1,7 @@
+SELECT c.cnum, c.name, c.city, c.rating  
+FROM customers c  
+WHERE c.rating = (  
+    SELECT MAX(c2.rating)  
+    FROM customers c2  
+    WHERE c2.city = c.city  
+);
