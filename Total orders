@@ -1,0 +1,4 @@
+SELECT odate, count(onum)
+FROM orders
+group by odate
+order by count(onum);
