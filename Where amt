@@ -1,0 +1,7 @@
+SELECT *  
+FROM orders  
+WHERE amt > ANY (  
+    SELECT amt  
+    FROM orders  
+    WHERE odate = '2024-10-06'  
+);
