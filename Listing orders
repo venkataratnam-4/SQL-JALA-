@@ -1,0 +1,2 @@
+SELECT count(distinct snum)
+FROM orders;
