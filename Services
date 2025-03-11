@@ -1,0 +1,6 @@
+SELECT cname
+FROM cust, orders
+WHERE orders.cnum = cust.cnum and 
+            orders.snum in ( select snum 
+     from salespeople
+             		          where sname in 'Peel','Motika'));
