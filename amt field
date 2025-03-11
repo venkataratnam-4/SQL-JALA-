@@ -1,0 +1,4 @@
+SELECT onum
+FROM orders
+WHERE amt != 0 or
+amt is not null;
