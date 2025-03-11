@@ -1,0 +1,3 @@
+SELECT cname, sname
+FROM cust, salespeople
+WHERE cust.snum = salespeople.snum;
