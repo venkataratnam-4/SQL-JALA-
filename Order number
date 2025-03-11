@@ -1,0 +1,3 @@
+SELECT onum, cname
+FROM orders, cust
+WHERE orders.cnum = cust.cnum;
