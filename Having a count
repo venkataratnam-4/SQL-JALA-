@@ -1,0 +1,4 @@
+SELECT snum  
+FROM customers  
+GROUP BY snum  
+HAVING COUNT(cnum) > 1;
